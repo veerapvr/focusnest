@@ -1,0 +1,16 @@
+# Step 1: Fetch upstream changes
+git fetch upstream
+
+# Step 2: Merge or rebase them into your branch
+git checkout main
+git merge upstream/main
+# or (preferred for clean history):
+git rebase upstream/main
+
+# Step 3: Push updated main to your fork
+git push origin main
+---------------------
+git status          # shows conflicted files
+git mergetool       # (if configured) or edit manually
+git add <resolved-files>
+git commit          # finish merge
